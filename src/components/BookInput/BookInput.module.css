@@ -1,0 +1,28 @@
+@import "../../variables.css";
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px 0;
+}
+
+label {
+    /* 1rem === 16px */
+    font-size: .8rem;
+}
+
+button {
+    height: var(--height-xs);
+    width: var(--width-xs);
+    vertical-align: top;
+}
+
+input {
+    height: var(--height-xs);
+    width: var(--width-m);
+    padding: 10px;
+    font-size: 1rem;
+}

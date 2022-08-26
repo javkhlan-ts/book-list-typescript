@@ -1,0 +1,13 @@
+:root {
+    --bg-dark: #668FB3;
+    --bg-light: #DEF0FF;
+    --bg-regular: #91CCFF;
+
+    --header-height: 50px;
+    --footer-height: 50px;
+
+    --height-xs: 25px;
+    --width-xs: 80px;
+    --width-s: 150px;
+    --width-m: 200px;
+}

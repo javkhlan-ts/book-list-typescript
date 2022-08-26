@@ -1,0 +1,14 @@
+@import '../variables.css';
+
+.main__container {
+    /* to make sure the footer is at the bottom */
+    /* add margin-top: auto; to the footer to make it work */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main__container main {
+    width: 800px;
+    margin: 0 auto;
+}
