@@ -1,12 +1,14 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import wishlistReducer from "./wishlistSlice";
 import booklistReducer from "./booklistSlice";
+import toastReducer from "./toastSlice";
 
 export const store = configureStore({
     reducer: {
         wishlistSlice: wishlistReducer,
-        booklistSlice: booklistReducer
+        booklistSlice: booklistReducer,
+        toastSlice: toastReducer
     },
     // Error: react_devtools_backend.js:4026 A non-serializable value was detected in an action
     middleware: getDefaultMiddleware =>
@@ -16,7 +18,7 @@ export const store = configureStore({
 });
 
 // custom types: removed export
-type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
 // export type AppThunk<ReturnType = void> = ThunkAction<
 //   ReturnType,

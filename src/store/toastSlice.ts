@@ -1,21 +1,32 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface ToastState {
+export interface ToastState {
     text: string,
-    status: "success" | "warning" | "error" | null
+    status: "success" | "warning" | "error" | null,
+    show: boolean
 }
 
 const initialState: ToastState = {
     text: "", 
-    status: null
+    status: null,
+    show: false
 }
 
 export const toastSlice = createSlice({
     name: "toastSlice",
     initialState,
-    reducers: {},
+    reducers: {
+        addToast: (state, action: PayloadAction<ToastState>) => {
+            state.text = action.payload.text;
+            state.status = action.payload.status;
+            state.show = action.payload.show;
+        },
+        hideToast: (state) => {
+            state.show = false;
+        }
+    },
     extraReducers: {}
 });
 
 export default toastSlice.reducer;
-// export const { reducer1, reducer2 } = toastSlice.actions;
+export const { addToast, hideToast } = toastSlice.actions;

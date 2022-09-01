@@ -1,0 +1,74 @@
+.bookitem__container {
+    flex: 0 0 50%;
+    padding: 10px;
+}
+
+.bookitem__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 300px;
+    background: rgba(145, 204, 255, 0.5);
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__actionArea {
+    height: 240px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;    
+    cursor: pointer;
+}
+
+.card__image {
+    flex-grow: 1;
+    height: 200px;
+    width: 150px;
+    overflow: hidden;
+    border: solid 2px white;
+}
+
+.card__body {
+    height: 200px;
+    flex-grow: 2;
+}
+
+.card__image img {
+    width: 100%;
+    object-fit: fit;
+}
+
+.card__btnContainer {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card__addBtn {
+    all: unset; /* remove default: border */
+    vertical-align: top; /* fixes 1px shift down */
+    width: 100px;
+    height: 20px;
+    background-color: #668FB3;
+    color: #DEF0FF;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+}
+
+.card__addBtn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.card__addBtn:active {
+    font-size: 12px;
+}

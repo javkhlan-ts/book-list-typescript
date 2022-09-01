@@ -1,0 +1,31 @@
+.toast__container {
+    background-color: #668FB3;
+    height: 50px;
+    width: 400px;
+    color: white;
+    border-radius: 10px;
+    
+    position: fixed;
+    z-index: 1;
+    bottom: 60px;
+    opacity: 0.9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Cannot do fade-in and fade-out */
+    animation: fadeOut 500ms 2600ms;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
